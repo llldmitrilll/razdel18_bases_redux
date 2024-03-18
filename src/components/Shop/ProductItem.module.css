@@ -1,0 +1,24 @@
+.product {
+   list-style: none;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 16px 5px rgba(39, 87, 39, 0.3);
+}
+
+.product h3 {
+   margin: 0;
+}
+
+.productRow {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+}
+
+.product button {
+   display: flex;
+   margin-left: auto;
+   color: white;
+   background: rgb(17, 51, 17);
+   text-align: right;
+}

@@ -1,0 +1,19 @@
+.button {
+   background-color: transparent;
+   color: #0f0;
+   outline: none;
+   border: 1px solid #0f0;
+   border-radius: 5px;
+   padding: 10px 40px;
+   cursor: pointer;
+}
+
+button span:not(:last-child) {
+   margin-right: 10px;
+}
+
+button span+span {
+   padding: 3px 10px;
+   background: rgb(32, 128, 32);
+   border-radius: 8px;
+}

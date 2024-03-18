@@ -1,0 +1,28 @@
+.article {
+   list-style: none;
+}
+
+.articleRow {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 20px;
+}
+
+.dubelButton {
+   display: flex;
+}
+
+.dubelButton button {
+   font-size: 20px;
+   cursor: pointer;
+   padding: 5px 15px;
+   border-radius: 5px;
+   border: 1px solid rgb(20, 53, 20);
+   color: rgb(20, 53, 20);
+
+}
+
+.dubelButton button:not(:last-child) {
+   margin-right: 10px;
+}
