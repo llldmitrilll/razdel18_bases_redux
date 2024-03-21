@@ -1,17 +1,30 @@
-import MyButton from "../UI/MyButton";
+import { useDispatch } from "react-redux";
+import { cartAction } from "../../store/cart-slice";
 import styles from "./ProductItem.module.css"
 
-const ProductItem = () => {
+const ProductItem = ({ id, title, price, description }) => {
+   const dispatchAction = useDispatch();
+
+   const addItemHandler = () => {
+      dispatchAction(
+         cartAction.addItem({
+            id,
+            title,
+            price
+         })
+      )
+   }
+
    return (
       <li className={styles.product}>
          <div className={styles.productRow}>
-            <h3 className={styles.productTitle}>Супер-товар 1</h3>
-            <span>$7.00</span>
+            <h3 className={styles.productTitle}>{title}</h3>
+            <span>${price.toFixed(2)}</span>
          </div>
          <div className={styles.productText}>
-            Благодаря своему высокому качеству, этот Супер-Товар 1 прослужит вам очень долго.
+            {description}
          </div>
-         <MyButton>Добавить в корзину</MyButton>
+         <button onClick={addItemHandler}>Добавить в корзину</button>
       </li>
    );
 };
